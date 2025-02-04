@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Flower Animation</title>
+    <style>
+        *{
+            background-image: url("Mine.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+        }
+        .flower-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flower {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .stem {
+            width: 10px;
+            height: 150px;
+            background: #4caf50;
+            position: relative;
+            animation: grow 2s ease-in-out forwards;
+            margin-top: -20px;
+        }
+        .petal {
+            position: absolute;
+            width: 60px;
+            height: 90px;
+            background: #e91e63;
+            border-radius: 50%;
+            transform-origin: bottom center;
+            opacity: 0;
+            animation: bloom 2s ease-in-out forwards;
+        }
+        .petal:nth-child(1) { transform: rotate(0deg); top: 10px; left: 45px; animation-delay: 0.2s; }
+        .petal:nth-child(2) { transform: rotate(45deg); top: 20px; left: 75px; animation-delay: 0.4s; }
+        .petal:nth-child(3) { transform: rotate(90deg); top: 45px; left: 90px; animation-delay: 0.6s; }
+        .petal:nth-child(4) { transform: rotate(135deg); top: 75px; left: 75px; animation-delay: 0.8s; }
+        .petal:nth-child(5) { transform: rotate(180deg); top: 90px; left: 45px; animation-delay: 1s; }
+        .petal:nth-child(6) { transform: rotate(225deg); top: 75px; left: 15px; animation-delay: 1.2s; }
+        .petal:nth-child(7) { transform: rotate(270deg); top: 45px; left: 0px; animation-delay: 1.4s; }
+        .petal:nth-child(8) { transform: rotate(315deg); top: 20px; left: 15px; animation-delay: 1.6s; }
+        
+        .center {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #ffeb3b;
+            border-radius: 50%;
+            top: 50px;
+            left: 50px;
+            z-index: 10;
+        }
+        .message {
+            font-size: 20px;
+            color: #d81b60;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+        @keyframes bloom {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes grow {
+            0% { height: 0; }
+            100% { height: 150px; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flower-container">
+        <div class="flower">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+    <div class="message">"Happy Birthday meri Mehwish Tumhari zindagi ka yeh khaas din tumhe har khushi de, har pal tumhara ho, aur tumhara har sapna sach ho. Tumhara saath meri zindagi ka sab se khoobsurat hissa hai, aur main dua karta hoon ke tumhara har din itna hi khubsurat ho jitni tum khud ho. Tumhe sab kuch accha mile, tumhari har dua qubool ho, aur tumhara har din khushiyon se bhara ho. Enjoy your special day to the fullest</div>
+    <div class="message">Meri pyari Mehwish, tum meri zindagi mein ek aisi roshni ho jo har andhere ko mita deti hai. Tumhare saath bitaye har pal ki apni ek alag hi ahmiyat hai, jise main apni zindagi ka hissa samajhta hoon. Tumhari muskurahat meri duniya roshan karti hai, aur tumhari khushi meri zindagi ka sab se bara maqsad hai. Tumne har lamha mere saath guzarne ke liye apne dil mein jo jagah di, uske liye main hamesha shukr guzaar hoon. Tum mere liye sirf ek dost nahi, balki ek wo insaan ho jo mere sapno ka hissa ban gaya hai. Main chahta hoon ke humari dosti aur mohabbat aise hi barqarar rahe, aur hum saath mil kar har mushkil ka samna karen, hamesha. Tumhari har baat, har cheez mujhe apni zindagi ka hissa lagti hai. Tum mere liye sab kuch ho, aur meri dua tumhare saath har waqt hai. Khuda tumhe hamesha khush rakhe, aur tumhari zindagi ko apni mohabbat se mehka de.</div>
+</body>
+</html>
